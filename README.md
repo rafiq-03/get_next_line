@@ -42,19 +42,19 @@
 #include &lt;stdio.h&gt;
 
 int main(void)
-    {
-        char *line;
-        int fd = open("example.txt", O_RDONLY);
-        if (fd == -1)
-            return 1;
-        while (get_next_line(fd, &line) == 1)
-            {
-                printf("%s\n", line);
-                free(line);
-            }
-        close(fd);
-        return 0;
-    }
+{
+    char *line;
+    int fd = open("example.txt", O_RDONLY);
+    if (fd == -1)
+        return 1;
+    while (get_next_line(fd, &line) == 1)
+        {
+            printf("%s\n", line);
+            free(line);
+        }
+    close(fd);
+    return 0;
+}
 </code></pre>
 
 <h2>Conclusion</h2>
